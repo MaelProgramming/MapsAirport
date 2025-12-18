@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -43,3 +44,18 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+=======
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import AppNavigator from "./navigation/AppNavigator";
+
+export default function App():React.JSX.Element{
+  return (
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+  )
+  
+}
+
+>>>>>>> abaf10f42e53b365db2b8e94ea80bf36869fecdc

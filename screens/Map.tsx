@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions, Text, TouchableOpacity } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import Header from '../components/Header';
 
-export default function MapScreen() {
+export default function MapScreen({ navigation }: any) {
   const initialRegion = {
     latitude: 40.4168,   // Madrid
     longitude: -3.7038,
@@ -14,28 +14,40 @@ export default function MapScreen() {
   return (
     <View style={styles.container}>
       <Header title="Map" />
+
       <MapView
         style={styles.map}
         initialRegion={initialRegion}
-        showsUserLocation={true}
+        showsUserLocation={true}      // Point bleu de l’utilisateur
+        showsMyLocationButton={true}   // Bouton natif pour centrer la carte
       >
         <Marker
           coordinate={{ latitude: 40.4168, longitude: -3.7038 }}
           title="Madrid"
-          description="Center of the map"
+          description="Capital city of Spain"
         />
       </MapView>
+
+      <View style={styles.buttonsContainer}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.buttonText}>Back to Home</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  container: { flex: 1 },
+  map: { flex: 1, width: Dimensions.get('window').width, height: Dimensions.get('window').height },
+  buttonsContainer: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    right: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  map: {
-    flex: 1,
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-  },
+  button: { backgroundColor: '#007AFF', paddingVertical: 12, paddingHorizontal: 20, borderRadius: 8 },
+  buttonText: { color: '#fff', fontSize: 16 },
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import Gap from '../components/Gap';
 import Header from '../components/Header';
 
 export default function HomeScreen({ navigation }: any) {
@@ -14,7 +15,7 @@ export default function HomeScreen({ navigation }: any) {
         >
           <Text style={styles.buttonText}>Go to About</Text>
         </TouchableOpacity>
-        <Text>{'\n'}</Text>
+        <Gap size={45} />
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('Map')} // <-- ici on navigue vers About
@@ -30,14 +31,6 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#fff' },
   content: { padding: 20 },
   text: { fontSize: 16, marginBottom: 20 },
-  button: {
-    backgroundColor: '#007AFF',
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 8,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-  },
+  button: { backgroundColor: '#007AFF', paddingVertical: 12, paddingHorizontal: 20, borderRadius: 8 },
+  buttonText: { color: '#fff', fontSize: 16 },
 });

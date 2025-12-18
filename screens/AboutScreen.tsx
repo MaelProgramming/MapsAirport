@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { MapsAirportAlert } from '../utils/handleAlert';
+import Gap from '../components/Gap';
 import Header from '../components/Header'; // Make sure the path is correct
 
 export default function AboutScreen({navigation}:any) {
@@ -14,11 +16,19 @@ export default function AboutScreen({navigation}:any) {
           This app allows you to view airport information and easily navigate between pages.
         </Text>
         <Text style={styles.text}>
-          Version: 1.0.0
+          Version: 1.0.
         </Text>
+        <Gap size={70} />
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')} > 
             <Text style={styles.buttonText}>Back to Home</Text>
         </TouchableOpacity>
+        <Gap size={35} />
+        <TouchableOpacity style={styles.button} onPress={() => MapsAirportAlert.handleAlert("Credits", "Developped by Mael Gruand, Coordinated by Eliot Dangas")}> 
+          <Text style={styles.buttonText}>See credits</Text>
+        </TouchableOpacity>
+
+
+
       </View>
     </View>
   );

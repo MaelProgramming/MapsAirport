@@ -6,9 +6,8 @@ import Header from '../components/Header';
 export default function HomeScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
-      <Header title="Home" />
+      <Header title="MapsAirport 🛩️" />
       <View style={styles.content}>
-        <Text style={styles.text}>Welcome to MapsAirport!</Text>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('About')} // <-- ici on navigue vers About
@@ -21,6 +20,14 @@ export default function HomeScreen({ navigation }: any) {
           onPress={() => navigation.navigate('Map')} // <-- ici on navigue vers About
         >
           <Text style={styles.buttonText}>Go to Map</Text>
+        </TouchableOpacity>
+
+        <Gap size={30}/>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('TerminalMap')} // <-- ici on navigue vers About
+        >
+          <Text style={styles.buttonText}>See Airport Terminal Map</Text>
         </TouchableOpacity>
       </View>
     </View>

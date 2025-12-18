@@ -16,7 +16,7 @@ export default function AboutScreen({navigation}:any) {
           This app allows you to view airport information and easily navigate between pages.
         </Text>
         <Text style={styles.text}>
-          Version: 1.0.
+          Version: 1.0.2
         </Text>
         <Gap size={70} />
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')} > 
@@ -26,9 +26,6 @@ export default function AboutScreen({navigation}:any) {
         <TouchableOpacity style={styles.button} onPress={() => MapsAirportAlert.handleAlert("Credits", "Developped by Mael Gruand, Coordinated by Eliot Dangas")}> 
           <Text style={styles.buttonText}>See credits</Text>
         </TouchableOpacity>
-
-
-
       </View>
     </View>
   );

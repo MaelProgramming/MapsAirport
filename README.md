@@ -9,4 +9,4 @@ This application is created using the framework [`ReactNative`](https://reactnat
 * Version 1.0.2 : Creating the main functionality which consist in calculating times between 2 controls or point in the airport
 
 
-https://github.com/MaelProgramming/MapsAirport/blob/main/MapsAirport-V1.0.2.mp4
+[Demo video of running app](https://youtube.com/shorts/3GqaJ97fm94?feature=share)

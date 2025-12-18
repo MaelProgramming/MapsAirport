@@ -1,6 +1,8 @@
 # MapsAirport
 
-This application is created the framework [`ReactNative`]: https://reactnative.dev/docs/getting-started
+This application is created using the framework [`ReactNative`](https://reactnative.dev/docs/getting-started)
+
+## Versions 
 
 * Version 1 : Init the project using React Native and created a basic component `Map.tsx`
 * Version 1.0.1 : Create a basic about and Home Page coerent with the application model
